@@ -10,10 +10,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="row align-items-center">
-        <h3>Jason's Resume</h3>
-        <p>Welcome to Jason's CV, here you might find some past project that provide you with confidence that Jason is indeed a programmer, and capable of contributing or leading your software development team.</p>
-        <p>Why go through all these steps just to make a static website? Shouldn't wordpress or any of the easy to get off the ground tools be used to achieve the same result? Very preceptive of you sir / madam / your preferred salutations, I do it the harder way to learn and improve, just like many things in life you should strive improve and tools could assist you on your journey. It shouldn't be the tools that dominates your mastery, therefore just like getting better in programming by going deeper into lower language. I should use zero tools to learn the context of what goes on in bootstrap, jquery, ajax etc.</p>
+    <div class="layout">
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <button class="burger-open" onclick="toggleMenu()">☰</button>
+        <div class="content-body">
+            <div class="header-row">
+                <h3>Jason Tan</h3>
+                <p id="datetime"></p>
+            </div>
+            <p>Welcome to my spot! Have a look around my past work and let me know if you want to get in touch for work.</p>
+            <img src="https://github-readme-stats.vercel.app/api?username=bullhugger&show_icons=true&theme=gruvbox" />
+        </div>
     </div>
 </body>
+<footer>
+    <script src="main.js"></script>
+</footer>
 </html>
