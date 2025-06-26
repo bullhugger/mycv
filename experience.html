@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/nani.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,22 +20,35 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="header-menu">
-            <button class="burger-open" onclick="toggleMenu()">☰</button>
-        </div>
-        <div class="content-body">
-            <div class="header-row">
-                <h3>Jason Tan</h3>
-                <p id="datetime"></p>
+        <div class="main-content">
+            <div class="header-menu">
+                <button class="burger-open" onclick="toggleMenu()">☰</button>
             </div>
-            <div class="youtube-container">
-                <h4>Kerjaya Prospek [October 2024 - July 2025]</h4>
-                <iframe frameborder="0" src="https://www.youtube.com/embed/a3fIcqvChy8" sandbox="allow-same-origin allow-scripts allow-presentation" allowfullscreen></iframe>
+            <div class="content-body">
+                <div class="header-row">
+                    <h3>Jason Tan</h3>
+                    <p id="datetime"></p>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-info-sm mb-3" data-toggle="collapse" data-target="#kerjaya-data">Kerjaya Prospek [October 2024 - July 2025] | Software Engineer</button>
+                    <div id="kerjaya-data" class="collapse mx-auto">
+                        <div class="youtube-container">
+                            <iframe frameborder="0" src="https://www.youtube.com/embed/a3fIcqvChy8" sandbox="allow-same-origin allow-scripts allow-presentation" allowfullscreen></iframe>
+                        </div>
+                        <span>Built company internal use web app to track and report construction project progress. Achieved by using CodeIgniter 4, MySQL, jQuery, AJAX, setup and table built all done by myself. Helped project person in charge trace subcon work done on each assigned units as opposed to calling each one normally takes whole afternoon now takes less than 20 minutes to check daily progress.</span>
+                        <br>
+                        <br>
+                        <span>Built project worker attendance to log hours spent at work site. Enable company to estimate the labor cost for the month ahead of time and organize overtime as required to see project completion in time. Same tech stack with terminal installed on each site with AWS Face Rekognition to detect pictures similarity and ensure workers are able to check in.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-info-sm mb-3" data-toggle="collapse" data-target="#eras-data">Eras Tech Sdn Bhd [July 2021 - October 2024] | Fullstack Developer</button>
+                    <div id="eras-data" class="collapse mx-auto">
+                        <span>Built module for share registra company offline shares. Using custom PHP fromework, MySQL, jQuery, AJAX, Bootstrap, the web application helped shareholders including offline shares into corporate exercise which returns them hundreds of thousands ringgit.</span>
+                        <span>Built Human Resource web app for leave application and HR documents distribution system. Using custom PHP fromework, MySQL, jQuery, AJAX, Bootstrap. Resulting in saving company and its sister company estimated RM10k per annum from using external services for over 40 employees.</span>
+                    </div>
+                </div>
             </div>
-                <span>Built company internal use web app to track and report construction project progress. Achieved by using CodeIgniter 4, MySQL, jQuery, AJAX, setup and table built all done by myself. Helped project person in charge trace subcon work done on each assigned units as opposed to calling each one normally takes whole afternoon now takes less than 20 minutes to check daily progress.</span>
-                <br>
-                <br>
-                <span>Built project worker attendance to log hours spent at work site. Enable company to estimate the labor cost for the month ahead of time and organize overtime as required to see project completion in time. Same tech stack with terminal installed on each site with AWS Face Rekognition to detect pictures similarity and ensure workers are able to check in.</span>
         </div>
     </div>
 </body>
