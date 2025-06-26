@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const now = new Date();
         const local_time = new Intl.DateTimeFormat("en-MY", {
             timeZone: 'Asia/Kuala_Lumpur',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
