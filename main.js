@@ -17,3 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     updateTime();
     setInterval(updateTime, 1000);
 })
+
+fetch("https://api.github.com/users/bullhugger/repos")
+    .then(response => response.json())
+    .then(data => {
+        const output = data.slice(0, 3).map(repo =>
+            `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
+        ).join('');
+        document.getElementById('github_projects').innerHTML = `<ul>${output}</ul>`;
+    })
+    .catch(error => console.error("GitHub API error:", error));
